@@ -2348,3 +2348,48 @@ footer {
         padding: 5px 0;
     }
 }
+/* Update these styles in style.css */
+.footer-v2-inner {
+    display: flex;
+    justify-content: space-around; /* Distributes remaining items evenly */
+    align-items: center;           /* Vertically centers items */
+    flex-wrap: wrap;               /* Ensures wrapping on smaller screens */
+    
+    text-align: center;            /* Centers text inside each footer block */
+}
+
+.footer-brand, 
+.footer-contact, 
+.footer-social {
+    flex: 1;
+    min-width: 250px;              /* Prevents items from getting too squeezed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;           /* Centers internal content like logos/icons */
+}
+
+@media (max-width: 768px) {
+    .footer-v2-inner {
+        flex-direction: column;    /* Stacks items vertically on mobile */
+        gap: 35px;
+    }
+}
+.footer-v2 {
+    padding-top: 10px !important; /* Reduces space above the logo/text */
+    padding-bottom: 10px !important; /* Reduces space below the content */
+}
+
+.footer-v2-inner {
+    gap: 40px !important; /* Shrinks the massive 200px gap between the columns */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.footer-brand img {
+    margin-bottom: 5px !important; /* Pulls the 'Fusion Enterprises' text closer to the logo */
+}
+
+.footer-brand h3 {
+    margin-top: 0 !important;
+    margin-bottom: 5px !important;
+}

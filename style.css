@@ -2997,3 +2997,35 @@ header.sticky-header.scrolled {
         height: auto !important;
     }
 }
+/* Update your existing mobile media query */
+@media (max-width: 768px) {
+  
+  /* 1. Move logo and h1 to the left by changing alignment */
+  header .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Changed from center to flex-start */
+    padding-left: 15px;      /* Adds a small gap from the left edge */
+  }
+
+  .logo-container {
+    align-items: flex-start; /* Align logo and text to the left */
+    text-align: left;
+    margin-right: 0;
+  }
+
+  .logo-container img {
+    margin: 0 0 10px 0;      /* Removes auto centering margin */
+    width: 160px;            /* Slightly smaller to prevent overflow */
+  }
+
+  /* 2. Move the header up from the bottom (reduce bottom padding) */
+  header {
+    padding: 15px 0 5px 0;   /* Top: 15px, Bottom: 5px */
+  }
+
+  header h1 {
+    font-size: 1.6rem;       /* Ensure the font isn't pushing off-screen */
+    margin: 0;
+  }
+}

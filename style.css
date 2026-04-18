@@ -2941,3 +2941,59 @@ header.sticky-header.scrolled {
     width: 100% !important;
   }
 }
+/* ===================================================
+   MOBILE FIXES: Header, Cut-offs, & Button Alignment
+=================================================== */
+
+@media (max-width: 768px) {
+    /* 1. Remove sticky header in mobile view */
+    header.sticky-header, 
+    header.sticky-header.scrolled {
+        position: relative !important;
+        top: auto !important;
+    }
+
+    /* 2. Fix product items getting cut off & button displacement */
+    .product-item {
+        flex-direction: column !important;
+        text-align: center;
+        height: auto !important;
+        min-height: auto !important;
+        padding: 20px 15px !important;
+        gap: 10px !important;
+    }
+
+    /* Center the product image */
+    .product-item img {
+        margin: 0 auto 10px !important;
+    }
+
+    /* Stack the text and button neatly */
+    .product-description {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Make the View Products button full-width and aligned */
+    .contact-btn {
+        width: 100% !important;
+        margin-top: 5px !important;
+        box-sizing: border-box;
+    }
+
+  /* 3. Restore internal scrolling for compact product cards */
+    .dropdown-content {
+        max-height: 400px !important; /* Adjust this number to make the scroll area taller/shorter on mobile */
+        overflow-y: auto !important;
+        padding-right: 5px; /* Adds a tiny buffer so the scrollbar doesn't overlap text */
+    }
+    
+    .product-category-card {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}

@@ -253,3 +253,10 @@ document.addEventListener('click', (e) => {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 });
+
+
+
+
+
+
+

@@ -1756,13 +1756,13 @@ nav a.active::after {
 }
 
 .mega-item {
-    display: flex;
+    display: flex ;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 20px;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    transition: all 0.8s ease;
     border-bottom: none !important;
     background: rgba(255, 255, 255, 0.05);
     text-decoration: none;
@@ -3030,3 +3030,26 @@ header.sticky-header.scrolled {
     text-align: center;
   }
 }
+.dropdown {
+        position: relative !important;
+        padding-bottom: 25px !important; /* Closes the gap between link and menu */
+        margin-bottom: -25px !important; /* Prevents the header from getting taller */
+    }
+
+    /* 2. Anchor the menu to the right side so it expands leftward into the screen */
+    .dropdown-content {
+        position: absolute !important;
+        top: 100% !important;
+        
+        /* This is the magic fix: Align right edges, auto the left */
+        left: auto !important;
+        right: 0 !important; 
+        
+        /* Width control for laptops */
+        width: 800px !important; /* You can adjust this width if needed */
+        max-width: 85vw !important; /* Safety net for smaller laptop screens */
+        
+        /* Remove any centering transforms */
+        transform: none !important; 
+    }
+    
